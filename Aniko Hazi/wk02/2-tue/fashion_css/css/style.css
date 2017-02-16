@@ -1,0 +1,128 @@
+
+body{
+font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+}
+
+main{
+  width: 70%;
+  display: inline-block;
+  padding: 0 2% 0 0;
+}
+aside{
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0 0 2%;
+}
+
+img{
+  max-width: 100%;
+}
+
+article{
+  border-bottom: 1px solid lightgrey;
+}
+
+h1{
+  color: red;
+  font-size: 3rem;
+  margin: 0;
+  float: left;
+}
+
+h3 {
+  font-size: 2rem;
+  color: lightgrey;
+  margin:0 0 0ls 5%;
+  float: left;
+  line-height: 215%;
+}
+
+h4{
+  font-weight: bold;
+}
+
+a{
+  color: red;
+  text-decoration: none;  /* ????? */
+}
+
+article a {
+  font-weigth: bold:
+  float: right;
+}
+
+article p::first-letter{
+  color: lightgrey;
+  font-size: 5rem;
+  float: left;
+  line-height: 90%
+}
+
+/*
+.first_letter{
+  color: lightgrey;
+  font-size: 5rem;
+  float: left;
+  position: relative;
+  top: -25px;
+  padding: 5px;
+}*/
+
+.date{
+  color: lightgrey;
+}
+
+nav {
+  clear: left;
+}
+
+footer p{
+  clear: left;
+  color: lightgrey;
+
+}
+
+footer ul{
+  padding: 0;
+}
+
+nav li{
+  float: left;
+  width: 16.666666%;
+  list-style: none;
+  min-width: 140px;
+  color: white;
+  background-color: black;
+  /*margin-left: 1px; */
+  text-align: center;
+  padding: 15px 0;
+}
+nav ul{
+  padding: 0;
+}
+
+footer li{
+  list-style: none;
+  float: left;
+  color: red;
+  font-size: 0.075 rem;
+  padding: 1% 2% 1% 0;
+  border-right: 1px solid lightgrey;
+  /* margin: 1%; */
+}
+
+
+.ad {
+  font-size: 5rem;
+  color: grey;
+  background-color: lightgrey;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 0;
+}
