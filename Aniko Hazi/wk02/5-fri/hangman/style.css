@@ -1,0 +1,40 @@
+
+body {
+  color: white;
+  background-color: black;
+  font-family: 'Hind', sans-serif;
+}
+
+li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+.hangman {
+  font-size: 500%;
+  text-align: center;
+  letter-spacing: 40px;
+  margin: 20px;
+}
+
+.wrong_guesses {
+  font-size: 200%;
+  letter-spacing: 10px;
+  margin: 0;
+}
+
+h5{
+  float: right;
+}
+
+h4, h5{
+  padding: 20px;
+  display: inline-block;
+  margin: 0;
+}
+
+h3{
+  text-align:center;
+  font-size: 200%;
+}
