@@ -1,15 +1,32 @@
 
+h1 {
+  text-align: center;
+}
 
 div{
-  height: 300px;
+  height: 200px;
   width: 300px;
   margin: 0 auto;
   display: inline-block;
+  margin: 50px;
+  border: 1px solid grey;
+  text-align: center;
 }
-.savings_box{
-  background-color: mistyrose;
+.savings{
+background: #e96443; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #e96443 , #904e95); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background-color: mistyrose; */
 }
 
-.checking_box{
-  background-color: cornflowerblue;
+.checking{
+  /* background-color: cornflowerblue; */
+  background: #757F9A; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #757F9A , #D7DDE8); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.overdraft{
+  background-color: red;
 }
