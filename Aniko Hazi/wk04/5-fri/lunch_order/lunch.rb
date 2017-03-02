@@ -37,7 +37,7 @@ while gets.chomp == 'y'
 end
 
 #binding.pry
-
+puts "All orders:"
 lunch_orders.each do |elem|
-  puts "#{elem.name} ordered: #{elem.orders.join(' and ')}"
+  puts "#{elem.name} ordered a #{elem.orders.join(' & ')}"
 end
