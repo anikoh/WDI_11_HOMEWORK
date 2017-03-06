@@ -1,0 +1,27 @@
+<form action="/" method="get" >
+  <label for="">film title</label>
+  <input name="movie" type="text">
+  <button>submit</button>
+</form>
+
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Director</th>
+  </tr>
+
+  <tr>
+    <td><%= @film_details['Title'] %></td>
+    <td><%= @film_details['Year'] %></td>
+    <td><%= @film_details['Director'] %></td>
+  </tr>
+  <tr>
+    <th rowspan = 3>
+      <img src="<%= @film_details['Poster'] %>" alt="">
+    </th>
+  </tr>
+
+</table>
