@@ -5,5 +5,5 @@
 
   <% @film_array["Search"].each do |elem| %>
     <h5>  <a href="/?t=<%= elem['Title'] %>"><%= elem['Title'] %></a>     </h5>
-
+    <img class="thumbnail" src="<%= elem['Poster'] %>" alt="">
   <% end %>

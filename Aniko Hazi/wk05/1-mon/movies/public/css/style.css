@@ -1,3 +1,11 @@
 body{
   background-color: cornflowerblue;
 }
+
+h5 {
+  font-size: 1em;
+}
+
+img.thumbnail {
+  width: 150px;
+}
