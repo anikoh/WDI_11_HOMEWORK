@@ -10,17 +10,26 @@
   <tr>
     <th>Title</th>
     <th>Year</th>
+    <th>Runtime</th>
+    <th>Genre</th>
     <th>Director</th>
+    <th>Actors</th>
+    <th>Plot</th>
   </tr>
 
+
   <tr>
-    <td><%= @film_details['Title'] %></td>
-    <td><%= @film_details['Year'] %></td>
-    <td><%= @film_details['Director'] %></td>
+    <td><%= @film_details[:title] %></td>
+    <td><%= @film_details[:year] %></td>
+    <td><%= @film_details[:runtime] %></td>
+    <td><%= @film_details[:genre] %></td>
+    <td><%= @film_details[:director] %></td>
+    <td><%= @film_details[:actors] %></td>
+    <td><%= @film_details[:plot] %></td>
   </tr>
   <tr>
     <th rowspan = 3>
-      <img src="<%= @film_details['Poster'] %>" alt="">
+      <img src="<%= @film_details[:poster] %>" alt="">
     </th>
   </tr>
 

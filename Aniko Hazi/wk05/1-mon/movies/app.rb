@@ -3,16 +3,29 @@ require 'sinatra'
 require 'sinatra/reloader'
 # require 'pg'
 require 'httparty'
+require_relative 'database_config'
+require_relative 'models/movie'
 
 
 get '/' do
 
-   @film_details =''
-
-   if params[:t] != nil && params[:t] != ''
-    film_code = params[:t]
-    @film_details = HTTParty.get('http://omdbapi.com/?t='+film_code)
-   end
+   #if movie is in database use that, otherwise search for movie and save to database
+   # might need to process params before it's a match for title?
+    if Movie.find_by(title: params[:t])
+      @film_details = Movie.find_by(title: params[:t])
+    elsif params[:t] != nil && params[:t] != ''
+      @film_details = Movie.new
+      result = HTTParty.get("http://omdbapi.com/?t=#{params[:t]}")
+      @film_details.title = result["Title"]
+      @film_details.year = result["Year"]
+      @film_details.runtime = result["Runtime"]
+      @film_details.genre = result["Genre"]
+      @film_details.director = result["Director"]
+      @film_details.actors = result["Actors"]
+      @film_details.plot = result["Plot"]
+      @film_details.poster = result["Poster"]
+      @film_details.save
+    end
 
   erb :index
 end
@@ -20,12 +33,11 @@ end
 
 get '/list' do
 
-#  if only one movie
-#  redirect to '/'
+  #  if only one movie
+  #  redirect to '/'
 
 
-  film_code = params[:movie]
-  @film_array = HTTParty.get('http://omdbapi.com/?s='+film_code)
+  @film_array = HTTParty.get("http://omdbapi.com/?s=#{params[:movie]}")
 
   if @film_array["Search"].length == 1
     redirect '/?t=' + @film_array["Search"][0]["Title"]
