@@ -2,10 +2,51 @@ body{
   background-color: cornflowerblue;
 }
 
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.details {
+  width: 45%;
+  display: inline-block;
+}
+
+.poster {
+  width: 45%;
+  display: inline-block;
+}
+
 h5 {
   font-size: 1em;
 }
 
-img.thumbnail {
+.list {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thumbnail {
+  width: 33.33333%;
+  height: 330px;
+  display: inline-block;
+  border: solid 1px black;
+  text-align: center;
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+
+.thumbnail img {
   width: 150px;
+}
+
+
+ul {
+  list-style: none;
 }

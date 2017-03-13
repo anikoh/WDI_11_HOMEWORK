@@ -11,9 +11,11 @@ get '/' do
 
    #if movie is in database use that, otherwise search for movie and save to database
    # might need to process params before it's a match for title?
+  if params[:t] != nil && params[:t] != ''
+
     if Movie.find_by(title: params[:t])
       @film_details = Movie.find_by(title: params[:t])
-    elsif params[:t] != nil && params[:t] != ''
+    else
       @film_details = Movie.new
       result = HTTParty.get("http://omdbapi.com/?t=#{params[:t]}")
       @film_details.title = result["Title"]
@@ -26,6 +28,7 @@ get '/' do
       @film_details.poster = result["Poster"]
       @film_details.save
     end
+  end
 
   erb :index
 end
