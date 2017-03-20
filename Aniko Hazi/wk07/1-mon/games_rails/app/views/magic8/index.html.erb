@@ -1,0 +1,10 @@
+<form action="/magic8" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+<label for="">Ask your question</label>
+<input type="test" name="question">
+<button>Ask!</button>
+</form>
+
+
+<%= @response %>

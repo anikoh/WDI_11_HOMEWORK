@@ -1,0 +1,11 @@
+<form action="/rock_paper_scissors/play" method="get">
+
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+<input type="radio" name="throw" value="rock" checked> rock<br>
+<input type="radio" name="throw" value="paper"> paper<br>
+<input type="radio" name="throw" value="scissors"> scissors <br>
+
+<button>Throw!</button>
+
+</form>
