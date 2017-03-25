@@ -8,12 +8,16 @@
   <title>Movies</title>
 </head>
 <body>
+  <h1>OMDB Movie Search</h1>
   <form action="">
-    
+    <label for="">Search for movie</label>
+    <input type="text" name="movie_title">
+    <button type='button' class="search">Search</button>
   </form>
+  <ul id="list">
+  </ul>
 
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
