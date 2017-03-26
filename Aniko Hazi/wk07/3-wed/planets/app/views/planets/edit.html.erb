@@ -1,0 +1,8 @@
+<form action="/planets/edit/<%=@planet.id%>" method="post">
+
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="">name</label>
+  <input type="text" name="name" value= <%= @planet.name%>>
+
+  <button>edit</button>
+</form>

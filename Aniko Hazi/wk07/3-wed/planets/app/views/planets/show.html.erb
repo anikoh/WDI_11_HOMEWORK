@@ -1,0 +1,32 @@
+<%= @planet.name%>
+
+
+<form action="/planets/<%= @planet.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+<button>DELETE</button>
+</form>
+
+
+<form action="/planets/<%= @planet.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+<button>EDIT</button>
+</form>
+
+
+
+
+<% @comments.each do |comment|%>
+<p><%= comment.body %></p>
+<hr>
+<%end%>
+
+<form class="" action="/comments" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="planet_id" value="<%= @planet.id%>">
+  <textarea name="body" rows="8" cols="80"></textarea>
+
+  <button name="button">POST</button>
+</form>
