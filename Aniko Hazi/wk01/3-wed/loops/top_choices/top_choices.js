@@ -17,3 +17,8 @@ for (i=0; i< index; i++){
     console.log("My " + (i+1) + "th choice is " + favouriteColours[i]);
   }
 }
+
+
+// another option for the suffixes, with less code!
+// var suffix = ['st', 'nd', 'rd', 'th'];
+//  console.log("My " + (i+1) + suffix[i] + "choice is" + favouriteColours[i]);

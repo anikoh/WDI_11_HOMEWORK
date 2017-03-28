@@ -5,23 +5,23 @@ var readingList = [
 
   {title: "The Left Hand of Darkness",
   author: "Ursula Le Guin",
-  alreadyRead: true,},
+  alreadyRead: true},
 
   {title: "Your Life and Others",
   author: "Ted Chiang",
-  alreadyRead: true ,},
+  alreadyRead: true},
 
   {title: "Trigger Warnings",
   author: "Neil Gaiman",
-  alreadyRead: false,},
+  alreadyRead: false},
 
   {title: "Sandman",
   author: "Neil Gaiman",
-  alreadyRead: true,},
+  alreadyRead: true},
 
   {title: "Lilith's Brood",
   author: "Octavia Butler",
-  alreadyRead: false,},
+  alreadyRead: false},
 
 ]
 
@@ -36,3 +36,12 @@ for (var i=0; i< count; i++){
 
   }
 }
+
+// (readingList[i].alreadyRead)
+// is enough, evaluates to true or false
+
+
+
+// within the for loop
+// var bookDescription = " ' " + readingList[i]
+// etc, makes the console log shorter and more readable
