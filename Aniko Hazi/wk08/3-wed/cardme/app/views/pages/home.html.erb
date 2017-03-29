@@ -1,0 +1,66 @@
+<!-- https://www.placecage.com/200/300 -->
+
+<!-- flexbox example -->
+<!-- <div class="barby">
+  <div class="chicken">chicken</div>
+  <div class="pineapple">pineapple</div>
+  <div class="tomato">tomato</div>
+</div>
+ -->
+
+
+
+
+<div class="wrapper"></div>
+
+<script id="new-form-template" type="text/x-handlebars-template">
+  <form class="new-card-form" action="">
+    <h2>Create Card</h2>
+    <label for="" class="">name</label>
+    <input type="text" class="new-card-name">
+    <br>
+    <label for="">image_url</label>
+    <input type="text" class="new-card-image_url">
+    <br>
+    <button class="new-card-action">create card</button>
+  </form>
+</script>
+
+
+<script id="card-template" type="text/x-handlebars-template">
+  <div class="card" data-id="{{id}}">
+    <header class="content">
+      <div>{{ name }}</div>
+    </header>
+    <div class="image">
+      <img src="{{ image_url }}" alt="">
+    </div>
+    <footer class="content">
+      <div class="actions">
+        <span class="delete-action">delete</span>
+        <span class="edit-action">edit</span>
+      </div>
+    </footer>
+  </div>
+</script>
+
+
+<script id="edit-form-template" type="text/x-handlebars-template">
+  <form class="edit-card-form" action="">
+    <h2>Edit Card</h2>
+    <input type="hidden" class="edit-card-id" value="{{id}}">
+    <label for="" class="">name</label>
+    <input type="text" class="edit-card-name" value="{{name}}">
+    <br>
+    <label for="">image_url</label>
+    <input type="text" class="edit-card-image_url" value="{{image_url}}">
+    <br>
+    <button class="edit-form-action">edit card</button>
+  </form>
+</script>
+
+
+<!-- use flexbox to place edit and delete buttons
+on click get a form to edit that card, clear all the other cards
+on button press return to all cards
+make the card design better -->

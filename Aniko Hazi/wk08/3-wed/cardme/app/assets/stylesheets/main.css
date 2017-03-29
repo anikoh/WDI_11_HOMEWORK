@@ -1,0 +1,73 @@
+.wrapper {
+  display: flex;
+}
+
+.content {
+  padding: 5px;
+}
+
+
+.card, form {
+  border-radius: 10px;
+  padding: 10px 0;
+  background-color: lightgrey;
+  flex-grow: 1;
+  margin: 2%;
+}
+
+
+
+.card img {
+  width: 100%;
+}
+
+.card header {
+  text-align: center;
+
+}
+
+.card footer {
+  text-align: center;
+
+}
+
+.card .image {
+  margin: 0 auto;
+}
+
+.card .delete-action {
+  cursor: pointer;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* flexbox example
+
+.barby {
+  background-color: brown;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.barby > div {
+  height: 100px;
+}
+
+.chicken {
+  background-color: pink;
+  order: 2;
+}
+
+.pineapple {
+ background-color: yellow;
+
+}
+
+.tomato {
+  background-color: red;
+}*/
