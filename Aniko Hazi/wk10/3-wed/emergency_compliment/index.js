@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path'); // node stanard library
 var app = express();
 var engine = require('ejs-mate');
+var bodyParser  = require("body-parser");
 
 var name;
 
@@ -27,6 +28,12 @@ function logger(req, res, next) {
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
 
 // where are the templates?
 app.set('views', path.join(__dirname, 'views'))
@@ -68,6 +75,22 @@ app.get('/', function(req, res) {
     compliment: compliments[getRandom(0, compliments.length)],
     bgColor: colors[getRandom(0, colors.length)],
     userName: name
+  });
+
+});
+
+app.post('/', function(req, res) {
+
+  var newComp = req.body.input;
+  compliments.push(newComp);
+
+  console.log(newComp);
+  debugger;
+
+  res.render('home', {
+    compliment: compliments[getRandom(0, compliments.length)],
+    bgColor: colors[getRandom(0, colors.length)],
+    userName: ''
   });
 
 });

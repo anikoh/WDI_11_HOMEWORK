@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2",
-    "ejs-mate": ""
+    "ejs-mate": "",
+    "body-parser": ""
   },
   "devDependencies": {},
   "description": ""
