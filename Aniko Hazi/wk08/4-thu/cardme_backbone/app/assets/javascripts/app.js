@@ -1,45 +1,44 @@
+$(document).ready(function() {
+  var CardView = Backbone.View.extend({
 
+  //  className: 'card',
 
-var CardView = Backbone.View.extend({
+    template: Handlebars.compile($('#card-template').html()),
 
-//  className: 'card',
+    events: {
+  //    'click': 'markAsDone',
+  //    'click span('.delete-action')': 'changeBackgroundColor'
+    },
 
-  template: Handlebars.compile($('#card-template').html()),
+    render: function(){
+      var html = this.template(this.model);
+      this.$el.html(html);
+    },
 
-  events: {
-    'click': 'markAsDone',
-//    'click span('.delete-action')': 'changeBackgroundColor'
-  },
-
-  render: function(){
-    var html = this.template(this.model);
-    this.$el.html(html);
-  },
-
-  // markAsDone: function(){
-  //   this.$el.find('p').css('text-decoration', 'line-through');
-  // },
-  //
-  // changeBackgroundColor: function(){
-  //   this.$el.find('h2').css('background-color', 'mistyrose');
-  // }
-
-})
-
-
-$.ajax({
-  url: '/api/cards'
-
-}).done(function(cards){
-  cards.forEach(function(card){
-  var view = new CardView({model: card});
-  view.render();
-  $('.wrapper').append(view.el);  //attaches the root element
+    // markAsDone: function(){
+    //   this.$el.find('p').css('text-decoration', 'line-through');
+    // },
+    //
+    // changeBackgroundColor: function(){
+    //   this.$el.find('h2').css('background-color', 'mistyrose');
+    // }
 
   });
+
+  $.ajax({
+    url: 'http://localhost:3000/api/cards/'
+
+  }).done(function(cards){
+    console.log(cards);
+    cards.forEach(function(card){
+    var view = new CardView({model: card});
+    view.render();
+    $('.wrapper').append(view.el);  //attaches the root element
+
+    });
+  });
+
 });
-
-
 
 
 
